@@ -6,7 +6,8 @@ body {
 
 nav {
   display: flex;
-  justify-content: space-between;  
+  justify-content: space-between;
+  background-color: rgb(37, 37, 37);
 }
 
 nav .info-container {
@@ -14,17 +15,84 @@ nav .info-container {
   align-items: center;
 }
 
+nav .main-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+nav p {
+  margin: 0;
+}
+
+nav p.info {
+  color: #fff;
+}
+
 .logo {
   height: 42px;
 }
 
-.image-container {
+nav .image-container {
   height: 42px;
   width: 42px;
   border-radius: 50%;
   overflow: hidden;
+  margin: 0 20px;
 }
 
 .image-container img {
   width: 100%;
+}
+
+p.info {
+  margin: 0;
+}
+
+nav .nav-links-container {
+  display: flex;
+}
+
+nav button {
+  display: none;
+  border: none;
+  background-color: forestgreen;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+nav button:hover {
+  background-color: rgb(105, 209, 105);
+}
+
+nav a {
+  color: #fff;
+  font-size: 20px;
+  padding: 20px 20px 30px 20px;
+  border-radius: 20px 20px 0 0;
+  margin: 10px 10px 0 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+@media screen and (max-width: 840px) {
+  nav button {
+    display: block;
+  }
+
+  .hidden {
+    display: none !important; /* I don't like this. Figure it out. */
+  }
+
+  nav .main-container {    
+  justify-content: space-between;
+  width: 100%;
+  }
 }
